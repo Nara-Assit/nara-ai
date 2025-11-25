@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+gtts
+requests
+nest_asyncio
+python-multipart
