@@ -1,0 +1,3 @@
+[submodule "app/stt/klaam-updated"]
+	path = app/stt/klaam-updated
+	url = https://github.com/ahmednabiled/klaam-updated
