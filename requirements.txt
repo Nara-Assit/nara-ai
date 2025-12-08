@@ -4,3 +4,4 @@ gtts
 requests
 nest_asyncio
 python-multipart
+pyngrok

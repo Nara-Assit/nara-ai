@@ -5,5 +5,6 @@ class Settings:
     TTS_LANG = os.getenv("TTS_LANG", "ar")
     MISHKAL_URL = os.getenv("MISHKAL_URL", "https://tahadz.com/mishkal/ajaxGet")
     MAX_FILE_SIZE = int(os.getenv("MAX_FILE_SIZE", 10 * 1024 * 1024))
+    NGROK_AUTH_TOKEN = os.getenv("NGROK_AUTH_TOKEN", None)
 
 settings = Settings()
