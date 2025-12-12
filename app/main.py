@@ -28,9 +28,6 @@ async def root():
 
 @app.get("/health")
 async def health():
-<<<<<<< Updated upstream
-    return {"status": "healthy"}
-=======
     return {"status": "healthy"}
 
 # Run with optional ngrok
@@ -58,4 +55,3 @@ if __name__ == "__main__":
     
     # Run uvicorn
     uvicorn.run(app, host="0.0.0.0", port=port)
->>>>>>> Stashed changes
