@@ -49,13 +49,13 @@ if __name__ == "__main__":
             ngrok.set_auth_token(ngrok_token)
             public_url = ngrok.connect(port)
             print(f"\n{'='*60}")
-            print(f"🚀 Public URL: {public_url}")
+            print(f"Public URL: {public_url}")
             print(f"{'='*60}\n")
         except Exception as e:
-            print(f"⚠️  Ngrok failed: {e}")
+            print(f"Ngrok failed: {e}")
             print("Continuing without ngrok...\n")
     else:
-        print("ℹ️  No NGROK_AUTH_TOKEN provided, running locally only\n")
+        print("No NGROK_AUTH_TOKEN provided, running locally only\n")
     
     # Run uvicorn
     uvicorn.run(app, host="0.0.0.0", port=port)
