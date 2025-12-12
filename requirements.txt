@@ -3,4 +3,10 @@ uvicorn
 gtts
 requests
 nest_asyncio
+<<<<<<< Updated upstream
 python-multipart
+=======
+python-multipart
+pyngrok
+vosk
+>>>>>>> Stashed changes

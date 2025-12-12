@@ -28,4 +28,34 @@ async def root():
 
 @app.get("/health")
 async def health():
+<<<<<<< Updated upstream
     return {"status": "healthy"}
+=======
+    return {"status": "healthy"}
+
+# Run with optional ngrok
+if __name__ == "__main__":
+    import uvicorn
+    
+    port = 8000
+    # FIXED: Read the environment variable correctly
+    ngrok_token = os.getenv("NGROK_AUTH_TOKEN", None)
+    
+    # Only start ngrok if token is provided
+    if ngrok_token:
+        try:
+            from pyngrok import ngrok
+            ngrok.set_auth_token(ngrok_token)
+            public_url = ngrok.connect(port)
+            print(f"\n{'='*60}")
+            print(f"Public URL: {public_url}")
+            print(f"{'='*60}\n")
+        except Exception as e:
+            print(f"Ngrok failed: {e}")
+            print("Continuing without ngrok...\n")
+    else:
+        print("No NGROK_AUTH_TOKEN provided, running locally only\n")
+    
+    # Run uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=port)
+>>>>>>> Stashed changes
