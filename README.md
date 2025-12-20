@@ -65,3 +65,33 @@ curl -X POST "http://localhost:8000/api/tts/convert" \
 - STT files larger than 10 MB are rejected (`MAX_FILE_SIZE`).
 - Supported STT languages: Egyptian Arabic (`egy`) and Modern Standard Arabic (`msa`).
 - Temporary audio assets are stored under `/tmp/ai_services` (configurable via `TEMP_DIR`).
+
+---
+
+## Sound Alert 
+
+Detects critical environmental sounds to alert deaf and hard-of-hearing users.
+This service is designed for **mobile deployment (Flutter)** using TensorFlow Lite.
+
+### Pipeline
+- Input audio: Mono WAV, 16 kHz, 5 seconds
+- Audio normalization to [-1, 1]
+- Feature extraction using **YAMNet**
+- 1024-dim audio embeddings (mean pooled over time)
+- Embedding normalization using **StandardScaler**
+- Dense classifier (TFLite)
+
+### Model Details
+- Input shape: (1, 1024)
+- Data type: float32
+- Output: Softmax probabilities (6 classes — see `labels.txt`) 
+
+### Deployment Notes
+- The classifier **does not accept raw audio**
+- YAMNet must be executed first to extract embeddings
+- Mobile inference uses:
+  - `yamnet.tflite`
+  - `sound_classifier.tflite`
+  - `scaler.json`
+  - `labels.txt`
+  
