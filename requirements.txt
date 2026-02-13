@@ -8,3 +8,4 @@ pyngrok
 tensorflow==2.18.0 
 mediapipe==0.10.21
 opencv-python-headless
+vosk
