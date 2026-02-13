@@ -7,6 +7,10 @@ from app.sound_alert.routes import router as sound_alert_router
 from app.config import settings
 import os
 
+# Ngrok setup
+from pyngrok import ngrok
+import uvicorn
+
 os.makedirs(settings.TEMP_DIR, exist_ok=True)
 
 app = FastAPI(title="AI Services API", version="1.0.0")
