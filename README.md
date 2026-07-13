@@ -90,7 +90,8 @@ This service is designed for **mobile deployment (Flutter)** using TensorFlow Li
 - The classifier **does not accept raw audio**
 - YAMNet must be executed first to extract embeddings
 - Mobile inference uses:
-  - `yamnet.tflite`
+  - `yamnet_embeddings.tflite`(custom-converted to output 1024-dim embeddings — 
+     NOT a generic YAMNet tflite build, which outputs 521-class scores only)
   - `sound_classifier.tflite`
   - `scaler.json`
   - `labels.txt`

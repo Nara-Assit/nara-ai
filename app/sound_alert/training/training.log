@@ -1,0 +1,145 @@
+2025-12-05 19:12:12,130 - INFO - ============================================================
+2025-12-05 19:12:12,130 - INFO - SOUND CLASSIFIER TRAINING WITH AUGMENTATION
+2025-12-05 19:12:12,130 - INFO - Training started at: 2025-12-05 19:12:12.130448
+2025-12-05 19:12:12,130 - INFO - ============================================================
+2025-12-05 19:12:12,130 - INFO - Creating augmentation pipeline...
+2025-12-05 19:14:03,158 - INFO - ============================================================
+2025-12-05 19:14:03,158 - INFO - SOUND CLASSIFIER TRAINING WITH AUGMENTATION
+2025-12-05 19:14:03,158 - INFO - Training started at: 2025-12-05 19:14:03.158113
+2025-12-05 19:14:03,158 - INFO - ============================================================
+2025-12-05 19:14:03,158 - INFO - Creating augmentation pipeline...
+2025-12-05 19:14:03,158 - INFO - Augmentation pipeline ready
+2025-12-05 19:14:03,158 - INFO - Loading YAMNet model...
+2025-12-05 19:14:03,158 - INFO - Using C:\Users\WIN10~1\AppData\Local\Temp\tfhub_modules to cache modules.
+2025-12-05 19:14:03,279 - WARNING - From C:\Users\Win 10\Desktop\sound_alert_feature\tf_env\Lib\site-packages\tensorflow_hub\resolver.py:120: The name tf.gfile.MakeDirs is deprecated. Please use tf.io.gfile.makedirs instead.
+
+2025-12-05 19:14:03,281 - WARNING - From C:\Users\Win 10\Desktop\sound_alert_feature\tf_env\Lib\site-packages\tensorflow_hub\module_v2.py:126: The name tf.saved_model.load_v2 is deprecated. Please use tf.compat.v2.saved_model.load instead.
+
+2025-12-05 19:14:06,176 - INFO - Fingerprint not found. Saved model loading will continue.
+2025-12-05 19:14:06,176 - INFO - path_and_singleprint metric could not be logged. Saved model loading will continue.
+2025-12-05 19:14:06,176 - INFO - YAMNet model loaded successfully
+2025-12-05 19:14:06,176 - INFO - Starting dataset processing from: dataset
+2025-12-05 19:14:06,176 - INFO - Target samples per class: 280
+2025-12-05 19:14:06,176 - INFO - ------------------------------------------------------------
+2025-12-05 19:14:06,185 - INFO - Original dataset distribution:
+2025-12-05 19:14:06,185 - INFO -   baby_crying: 70 files
+2025-12-05 19:14:06,185 - INFO -   car_horn: 70 files
+2025-12-05 19:14:06,185 - INFO -   doorbell: 70 files
+2025-12-05 19:14:06,185 - INFO -   door_knock: 70 files
+2025-12-05 19:14:06,185 - INFO -   fire_alarm: 70 files
+2025-12-05 19:14:06,185 - INFO -   glass_break: 70 files
+2025-12-05 19:14:06,185 - INFO - 
+Processing class: baby_crying
+2025-12-05 19:14:06,185 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:14:23,926 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:14:23,926 - INFO -   Total for baby_crying: 280
+2025-12-05 19:14:23,926 - INFO - 
+Processing class: car_horn
+2025-12-05 19:14:23,926 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:14:36,872 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:14:36,872 - INFO -   Total for car_horn: 280
+2025-12-05 19:14:36,872 - INFO - 
+Processing class: doorbell
+2025-12-05 19:14:36,872 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:14:48,362 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:14:48,362 - INFO -   Total for doorbell: 280
+2025-12-05 19:14:48,362 - INFO - 
+Processing class: door_knock
+2025-12-05 19:14:48,362 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:15:00,927 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:15:00,928 - INFO -   Total for door_knock: 280
+2025-12-05 19:15:00,928 - INFO - 
+Processing class: fire_alarm
+2025-12-05 19:15:00,928 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:15:13,788 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:15:13,790 - INFO -   Total for fire_alarm: 280
+2025-12-05 19:15:13,790 - INFO - 
+Processing class: glass_break
+2025-12-05 19:15:13,790 - INFO -   Need 210 more samples - 3 augmentations per file
+2025-12-05 19:15:26,017 - INFO -   Original: 70 | Augmented: 210 | Skipped: 0
+2025-12-05 19:15:26,017 - INFO -   Total for glass_break: 280
+2025-12-05 19:15:26,017 - INFO - ------------------------------------------------------------
+2025-12-05 19:15:26,017 - INFO - Total samples collected: 1680
+2025-12-05 19:15:26,017 - INFO - Feature vector shape: (1680, 1024)
+2025-12-05 19:15:26,055 - INFO - Classes (6): [np.str_('baby_crying'), np.str_('car_horn'), np.str_('door_knock'), np.str_('doorbell'), np.str_('fire_alarm'), np.str_('glass_break')]
+2025-12-05 19:15:26,055 - INFO - 
+Final dataset distribution:
+2025-12-05 19:15:26,055 - INFO -   baby_crying: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO -   car_horn: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO -   door_knock: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO -   doorbell: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO -   fire_alarm: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO -   glass_break: 280 samples (16.7%)
+2025-12-05 19:15:26,055 - INFO - 
+Class weights for balanced training:
+2025-12-05 19:15:26,055 - INFO -   baby_crying: 1.000
+2025-12-05 19:15:26,055 - INFO -   car_horn: 1.000
+2025-12-05 19:15:26,055 - INFO -   door_knock: 1.000
+2025-12-05 19:15:26,055 - INFO -   doorbell: 1.000
+2025-12-05 19:15:26,055 - INFO -   fire_alarm: 1.000
+2025-12-05 19:15:26,055 - INFO -   glass_break: 1.000
+2025-12-05 19:15:26,055 - INFO - ------------------------------------------------------------
+2025-12-05 19:15:26,055 - INFO - Splitting dataset (80% train, 20% test)...
+2025-12-05 19:15:26,055 - INFO - Training samples: 1344
+2025-12-05 19:15:26,066 - INFO - Testing samples: 336
+2025-12-05 19:15:26,066 - INFO - ------------------------------------------------------------
+2025-12-05 19:15:26,066 - INFO - Building improved model architecture...
+2025-12-05 19:15:26,159 - INFO - Model architecture:
+2025-12-05 19:15:26,184 - INFO - ------------------------------------------------------------
+2025-12-05 19:15:26,184 - INFO - Starting training (max 100 epochs with early stopping)...
+2025-12-05 19:15:26,184 - INFO - Using class weights for balanced training
+2025-12-05 19:17:02,961 - INFO - Training completed in 96.77 seconds (1.61 minutes)
+2025-12-05 19:17:02,962 - INFO - ------------------------------------------------------------
+2025-12-05 19:17:02,962 - INFO - Evaluating model on test set...
+2025-12-05 19:17:03,244 - INFO - Test Accuracy: 0.9702 (97.02%)
+2025-12-05 19:17:03,244 - INFO - 
+Classification Report:
+2025-12-05 19:17:03,249 - INFO -               precision    recall  f1-score   support
+2025-12-05 19:17:03,249 - INFO - 
+2025-12-05 19:17:03,256 - INFO -  baby_crying       1.00      0.98      0.99        56
+2025-12-05 19:17:03,256 - INFO -     car_horn       0.95      0.95      0.95        56
+2025-12-05 19:17:03,257 - INFO -   door_knock       0.96      0.98      0.97        56
+2025-12-05 19:17:03,257 - INFO -     doorbell       0.98      0.98      0.98        56
+2025-12-05 19:17:03,257 - INFO -   fire_alarm       0.98      0.93      0.95        56
+2025-12-05 19:17:03,257 - INFO -  glass_break       0.95      1.00      0.97        56
+2025-12-05 19:17:03,257 - INFO - 
+2025-12-05 19:17:03,258 - INFO -     accuracy                           0.97       336
+2025-12-05 19:17:03,258 - INFO -    macro avg       0.97      0.97      0.97       336
+2025-12-05 19:17:03,258 - INFO - weighted avg       0.97      0.97      0.97       336
+2025-12-05 19:17:03,258 - INFO - 
+2025-12-05 19:17:03,258 - INFO - 
+Confusion Matrix:
+2025-12-05 19:17:03,263 - INFO - Predicted -->
+2025-12-05 19:17:03,263 - INFO - Actual          baby_cry car_horn door_kno doorbell fire_ala glass_br
+2025-12-05 19:17:03,264 - INFO - baby_crying           55        0        0        0        0        1
+2025-12-05 19:17:03,264 - INFO - car_horn               0       53        2        0        1        0
+2025-12-05 19:17:03,264 - INFO - door_knock             0        0       55        0        0        1
+2025-12-05 19:17:03,264 - INFO - doorbell               0        0        0       55        0        1
+2025-12-05 19:17:03,264 - INFO - fire_alarm             0        3        0        1       52        0
+2025-12-05 19:17:03,264 - INFO - glass_break            0        0        0        0        0       56
+2025-12-05 19:17:03,264 - INFO - 
+Per-class accuracy:
+2025-12-05 19:17:03,267 - INFO -   baby_crying: 98.21%
+2025-12-05 19:17:03,268 - INFO -   car_horn: 94.64%
+2025-12-05 19:17:03,268 - INFO -   door_knock: 98.21%
+2025-12-05 19:17:03,268 - INFO -   doorbell: 98.21%
+2025-12-05 19:17:03,269 - INFO -   fire_alarm: 92.86%
+2025-12-05 19:17:03,269 - INFO -   glass_break: 100.00%
+2025-12-05 19:17:03,270 - INFO - ------------------------------------------------------------
+2025-12-05 19:17:03,270 - INFO - Saving model and artifacts...
+2025-12-05 19:17:03,270 - WARNING - You are saving your model as an HDF5 file via `model.save()` or `keras.saving.save_model(model)`. This file format is considered legacy. We recommend using instead the native Keras format, e.g. `model.save('my_model.keras')` or `keras.saving.save_model(model, 'my_model.keras')`. 
+2025-12-05 19:17:03,321 - INFO - Model saved: sound_classifier.h5
+2025-12-05 19:17:03,323 - INFO - Label encoder saved: label_encoder.pkl
+2025-12-05 19:17:03,323 - INFO - Scaler saved: scaler.pkl
+2025-12-05 19:17:03,326 - INFO - Embeddings saved: X_embeddings.npy
+2025-12-05 19:17:03,326 - INFO - Labels saved: y_labels.npy
+2025-12-05 19:17:03,332 - INFO - Processed files list saved: seen_files.txt (420 files)
+2025-12-05 19:17:03,332 - INFO - Training history saved: training_history.npy
+2025-12-05 19:17:03,332 - INFO - ============================================================
+2025-12-05 19:17:03,334 - INFO - TRAINING COMPLETE!
+2025-12-05 19:17:03,334 - INFO - Finished at: 2025-12-05 19:17:03.334998
+2025-12-05 19:17:03,334 - INFO - Total samples used: 1680
+2025-12-05 19:17:03,334 - INFO - Final test accuracy: 97.02%
+2025-12-05 19:17:03,334 - INFO - Training time: 1.61 minutes
+2025-12-05 19:17:03,334 - INFO - ============================================================
+
